@@ -1,15 +1,26 @@
 public class Employee {
+
     private String name;
     private String ngaySinh;
     private String diaChi;
+    private String imagee;
+
+    public String getImagee() {
+        return imagee;
+    }
+
+    public void setImagee(String imagee) {
+        this.imagee = imagee;
+    }
 
     public Employee() {
     }
 
-    public Employee(String name, String ngaySinh, String diaChi) {
+    public Employee(String name, String ngaySinh, String diaChi, String imagee) {
         this.name = name;
         this.ngaySinh = ngaySinh;
         this.diaChi = diaChi;
+        this.imagee = imagee;
     }
 
     public String getName() {

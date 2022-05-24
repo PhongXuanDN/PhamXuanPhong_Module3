@@ -13,15 +13,22 @@
 </head>
 <body>
 <h1>Danh Sách Khách Hàng</h1>
-    <table>
+    <table BORDER="2px">
         <tr>
             <th>Tên</th>
             <th>Ngày sinh</th>
             <th>Địa Chỉ</th>
             <th>Ảnh</th>
         </tr>
-        <c:forEach items="employee" var="emp">
-            <td>"${emp.name}"</td>
+        <c:forEach items="${employees}" var="emp">
+        <tr>
+
+            <td>${emp.name}</td>
+            <td>${emp.ngaySinh}</td>
+            <td>${emp.diaChi}</td>
+            <td>${emp.imagee}</td>
+
+        </tr>
         </c:forEach>
     </table>
 </body>

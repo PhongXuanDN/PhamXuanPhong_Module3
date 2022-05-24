@@ -14,9 +14,9 @@ public class EmployeeServlet extends HttpServlet {
 
     @Override
     public void init() throws ServletException {
-        employees.add(new Employee("Phong","23/08/1999","Đà Nẵng"));
-        employees.add(new Employee("Phong","23/08/1999","Đà Nẵng"));
-        employees.add(new Employee("Phong","23/08/1999","Đà Nẵng"));    
+        employees.add(new Employee("Phong","23/08/1999","Đà Nẵng",""));
+        employees.add(new Employee("Xuan","23/08/2000","Ha Noi",""));
+        employees.add(new Employee("Pham","23/08/1998","TP Ho Chi Minh",""));
 
     }
 
@@ -25,8 +25,8 @@ public class EmployeeServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("employee",employees);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("employee.jsp");
+        request.setAttribute("employees",employees);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("Employee/employee.jsp");
         dispatcher.forward(request,response);
     }
 }
